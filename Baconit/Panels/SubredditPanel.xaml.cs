@@ -390,7 +390,7 @@ namespace Baconit.Panels
 
         private void PostList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Post tappedPost = (sender as EndDetectingListView).SelectedItem as Post;
+            Post tappedPost = (sender as EndDetectingListView)?.SelectedItem as Post;
 
             if (tappedPost != null)
             {
