@@ -396,25 +396,16 @@ namespace Baconit.Panels
             {
                 NavigateToFlipView(tappedPost);
             }
+            else
+            {
+                App.BaconMan.MessageMan.DebugDia("Item tapped that had no Post");
+                App.BaconMan.TelemetryMan.ReportUnexpectedEvent(sender, "NoPost");
+            }
             
 
             // Just set it back to -1 to remove the highlight
             ui_postList.SelectedIndex = -1;
-        }
-
-        /// <summary>
-        /// Fired when a post title is tapped.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PostTitle_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            // Get the post
-            Post tappedPost = (sender as FrameworkElement).DataContext as Post;
-
-            // Go Go Go!
-            NavigateToFlipView(tappedPost);
-        }
+        }       
 
         /// <summary>
         /// Fired when a up vote arrow is tapped
