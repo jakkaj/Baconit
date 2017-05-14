@@ -390,6 +390,14 @@ namespace Baconit.Panels
 
         private void PostList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Post tappedPost = (sender as EndDetectingListView).SelectedItem as Post;
+
+            if (tappedPost != null)
+            {
+                NavigateToFlipView(tappedPost);
+            }
+            
+
             // Just set it back to -1 to remove the highlight
             ui_postList.SelectedIndex = -1;
         }

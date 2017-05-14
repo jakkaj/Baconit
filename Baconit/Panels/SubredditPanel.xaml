@@ -81,7 +81,7 @@
                             HorizontalAlignment="Stretch"
                             Background="Transparent"
                             Orientation="Vertical"
-                            Tapped="PostTitle_Tapped">
+                            >
                     <Grid>
                         <TextBlock Margin="0,0,10,0"
                                    HorizontalAlignment="Left"
@@ -148,7 +148,6 @@
                             Margin="0,4,0,0"
                             VerticalAlignment="Top"
                             Background="{ThemeResource SystemControlBackgroundAccentBrush}"
-                            Tapped="PostTitle_Tapped"
                             Visibility="{x:Bind ImageVisibility, Mode=OneWay}">
                     <Image Width="70"
                            Margin="2"
