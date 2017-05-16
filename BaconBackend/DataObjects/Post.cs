@@ -594,6 +594,15 @@ namespace BaconBackend.DataObjects
             }
         }
 
+        [JsonIgnore]
+        public Visibility NsfwVisibility
+        {
+            get
+            {
+                return IsOver18 ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
 
 
         #region FlipView Vars
